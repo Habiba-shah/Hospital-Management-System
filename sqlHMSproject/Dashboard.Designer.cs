@@ -31,6 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            lblTitle1 = new Label();
             lblCount1 = new Label();
             panel3 = new Panel();
             lblTitle2 = new Label();
@@ -41,16 +42,12 @@
             panel5 = new Panel();
             lblTitle4 = new Label();
             lblCount4 = new Label();
-            lblTitle1 = new Label(); // Add missing declaration
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
             // 
             // panel1
             // 
@@ -64,23 +61,18 @@
             // 
             // label1
             // 
-            // 
-            // label1
-            // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(280, 20);
             label1.Name = "label1";
-            label1.Size = new Size(346, 48);
+            label1.Size = new Size(354, 48);
             label1.TabIndex = 0;
             label1.Text = "Hospital Dashboard";
             // 
             // panel2
             // 
-            // panel2 (Patients)
-            // 
-            panel2.BackColor = Color.FromArgb(46, 204, 113); // Emerald
+            panel2.BackColor = Color.FromArgb(46, 204, 113);
             panel2.Controls.Add(lblTitle1);
             panel2.Controls.Add(lblCount1);
             panel2.Location = new Point(40, 110);
@@ -91,7 +83,7 @@
             // lblTitle1
             // 
             lblTitle1.AutoSize = true;
-            lblTitle1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblTitle1.ForeColor = Color.White;
             lblTitle1.Location = new Point(15, 15);
             lblTitle1.Name = "lblTitle1";
@@ -102,7 +94,7 @@
             // lblCount1
             // 
             lblCount1.AutoSize = true;
-            lblCount1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCount1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblCount1.ForeColor = Color.White;
             lblCount1.Location = new Point(15, 50);
             lblCount1.Name = "lblCount1";
@@ -112,9 +104,7 @@
             // 
             // panel3
             // 
-            // panel3 (Doctors)
-            // 
-            panel3.BackColor = Color.FromArgb(52, 152, 219); // Peter River
+            panel3.BackColor = Color.FromArgb(52, 152, 219);
             panel3.Controls.Add(lblTitle2);
             panel3.Controls.Add(lblCount2);
             panel3.Location = new Point(240, 110);
@@ -125,18 +115,18 @@
             // lblTitle2
             // 
             lblTitle2.AutoSize = true;
-            lblTitle2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblTitle2.ForeColor = Color.White;
             lblTitle2.Location = new Point(15, 15);
             lblTitle2.Name = "lblTitle2";
-            lblTitle2.Size = new Size(83, 28);
+            lblTitle2.Size = new Size(82, 28);
             lblTitle2.TabIndex = 2;
             lblTitle2.Text = "Doctors";
             // 
             // lblCount2
             // 
             lblCount2.AutoSize = true;
-            lblCount2.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCount2.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblCount2.ForeColor = Color.White;
             lblCount2.Location = new Point(15, 50);
             lblCount2.Name = "lblCount2";
@@ -146,9 +136,7 @@
             // 
             // panel4
             // 
-            // panel4 (Nurses)
-            // 
-            panel4.BackColor = Color.FromArgb(230, 126, 34); // Carrot
+            panel4.BackColor = Color.FromArgb(230, 126, 34);
             panel4.Controls.Add(lblTitle3);
             panel4.Controls.Add(lblCount3);
             panel4.Location = new Point(440, 110);
@@ -159,18 +147,18 @@
             // lblTitle3
             // 
             lblTitle3.AutoSize = true;
-            lblTitle3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblTitle3.ForeColor = Color.White;
             lblTitle3.Location = new Point(15, 15);
             lblTitle3.Name = "lblTitle3";
-            lblTitle3.Size = new Size(76, 28);
+            lblTitle3.Size = new Size(75, 28);
             lblTitle3.TabIndex = 2;
             lblTitle3.Text = "Nurses";
             // 
             // lblCount3
             // 
             lblCount3.AutoSize = true;
-            lblCount3.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCount3.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblCount3.ForeColor = Color.White;
             lblCount3.Location = new Point(15, 50);
             lblCount3.Name = "lblCount3";
@@ -180,9 +168,7 @@
             // 
             // panel5
             // 
-            // panel5 (Appointments)
-            // 
-            panel5.BackColor = Color.FromArgb(155, 89, 182); // Amethyst
+            panel5.BackColor = Color.FromArgb(155, 89, 182);
             panel5.Controls.Add(lblTitle4);
             panel5.Controls.Add(lblCount4);
             panel5.Location = new Point(640, 110);
@@ -193,18 +179,18 @@
             // lblTitle4
             // 
             lblTitle4.AutoSize = true;
-            lblTitle4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblTitle4.ForeColor = Color.White;
             lblTitle4.Location = new Point(15, 15);
             lblTitle4.Name = "lblTitle4";
-            lblTitle4.Size = new Size(139, 28);
+            lblTitle4.Size = new Size(142, 28);
             lblTitle4.TabIndex = 3;
             lblTitle4.Text = "Appointments";
             // 
             // lblCount4
             // 
             lblCount4.AutoSize = true;
-            lblCount4.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCount4.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblCount4.ForeColor = Color.White;
             lblCount4.Location = new Point(15, 50);
             lblCount4.Name = "lblCount4";
@@ -216,6 +202,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(880, 500);
             Controls.Add(panel5);
             Controls.Add(panel4);
@@ -223,10 +210,9 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Dashboard";
-            Text = "Dashboard";
-            Load += Dashboard_Load;
-            BackColor = Color.WhiteSmoke; // Main background
             StartPosition = FormStartPosition.CenterScreen;
+            Text = " ";
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

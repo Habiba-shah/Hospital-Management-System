@@ -61,8 +61,13 @@ namespace sqlHMSproject
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Dashboard bo=new Dashboard();
+            Dashboard bo = new Dashboard();
             bo.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

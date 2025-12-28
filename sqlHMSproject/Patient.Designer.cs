@@ -60,10 +60,10 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(65, 25);
+            label1.Size = new Size(767, 48);
             label1.TabIndex = 0;
             label1.Text = "Patient";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -72,45 +72,50 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(13, 75);
             label2.Name = "label2";
-            label2.Size = new Size(83, 25);
+            label2.Size = new Size(92, 25);
             label2.TabIndex = 1;
             label2.Text = "PatientID";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(13, 128);
             label3.Name = "label3";
-            label3.Size = new Size(112, 25);
+            label3.Size = new Size(123, 25);
             label3.TabIndex = 2;
             label3.Text = "PatientName";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(13, 190);
             label4.Name = "label4";
-            label4.Size = new Size(44, 25);
+            label4.Size = new Size(46, 25);
             label4.TabIndex = 3;
             label4.Text = "Age";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(4, 237);
             label5.Name = "label5";
-            label5.Size = new Size(69, 25);
+            label5.Size = new Size(80, 28);
             label5.TabIndex = 4;
             label5.Text = "Gender";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(1, 294);
             label6.Name = "label6";
-            label6.Size = new Size(77, 25);
+            label6.Size = new Size(80, 25);
             label6.TabIndex = 5;
             label6.Text = "Address";
             // 
@@ -152,6 +157,7 @@
             // 
             // btnInsert
             // 
+            btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.Location = new Point(26, 348);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(112, 34);
@@ -162,6 +168,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.Location = new Point(173, 348);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
@@ -172,6 +179,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(322, 348);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
@@ -183,6 +191,7 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(374, 75);
             dataGridView1.Name = "dataGridView1";
@@ -195,6 +204,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
@@ -216,7 +226,6 @@
             Text = "Patient";
             Load += Patient_Load;
             flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

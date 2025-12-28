@@ -58,15 +58,17 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(354, 26);
             label1.Name = "label1";
-            label1.Size = new Size(58, 25);
+            label1.Size = new Size(94, 38);
             label1.TabIndex = 0;
             label1.Text = "Nurse";
             // 
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(392, 88);
             dataGridView1.Name = "dataGridView1";
@@ -77,6 +79,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(340, 379);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
@@ -87,6 +90,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.Location = new Point(191, 379);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
@@ -97,6 +101,7 @@
             // 
             // btnInsert
             // 
+            btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.Location = new Point(44, 379);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(112, 34);
@@ -136,36 +141,40 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(19, 279);
             label6.Name = "label6";
-            label6.Size = new Size(107, 25);
+            label6.Size = new Size(115, 25);
             label6.TabIndex = 33;
             label6.Text = "Department";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(22, 222);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(31, 222);
             label5.Name = "label5";
-            label5.Size = new Size(62, 25);
+            label5.Size = new Size(66, 25);
             label5.TabIndex = 32;
             label5.Text = "Phone";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(31, 159);
             label3.Name = "label3";
-            label3.Size = new Size(105, 25);
+            label3.Size = new Size(112, 25);
             label3.TabIndex = 30;
             label3.Text = "NurseName";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(31, 106);
             label2.Name = "label2";
-            label2.Size = new Size(76, 25);
+            label2.Size = new Size(81, 25);
             label2.TabIndex = 29;
             label2.Text = "NurseID";
             // 
@@ -173,6 +182,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);

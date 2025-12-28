@@ -32,8 +32,6 @@
             btnDelete = new Button();
             btnUpdate = new Button();
             btnInsert = new Button();
-            btnInsert = new Button();
-            btnInsert = new Button();
             comboBoxDiagnosis = new ComboBox();
             comboBoxNurse = new ComboBox();
             comboBoxDoctor = new ComboBox();
@@ -47,8 +45,6 @@
             panel1 = new Panel();
             label1 = new Label();
             label7 = new Label();
-            label1 = new Label();
-            label7 = new Label();
             comboBoxPrescription = new ComboBox();
             label8 = new Label();
             comboBoxTreatment = new ComboBox();
@@ -59,6 +55,7 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(383, 98);
             dataGridView1.Name = "dataGridView1";
@@ -68,6 +65,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(354, 424);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
@@ -78,6 +76,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.Location = new Point(205, 424);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
@@ -88,6 +87,7 @@
             // 
             // btnInsert
             // 
+            btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.Location = new Point(58, 424);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(112, 34);
@@ -137,45 +137,51 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(31, 289);
             label6.Name = "label6";
-            label6.Size = new Size(90, 25);
+            label6.Size = new Size(94, 25);
             label6.TabIndex = 34;
             label6.Text = "Diagnosis";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(31, 249);
             label5.Name = "label5";
-            label5.Size = new Size(58, 25);
+            label5.Size = new Size(62, 25);
             label5.TabIndex = 33;
             label5.Text = "Nurse";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(40, 202);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(28, 199);
             label4.Name = "label4";
-            label4.Size = new Size(114, 25);
+            label4.Size = new Size(120, 25);
             label4.TabIndex = 32;
             label4.Text = "DoctorName";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(40, 140);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(22, 134);
             label3.Name = "label3";
-            label3.Size = new Size(112, 25);
+            label3.Size = new Size(123, 25);
             label3.TabIndex = 31;
             label3.Text = "PatientName";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(40, 87);
             label2.Name = "label2";
-            label2.Size = new Size(46, 25);
+            label2.Size = new Size(48, 25);
             label2.TabIndex = 30;
             label2.Text = "MID";
             // 
@@ -191,18 +197,21 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(354, 26);
             label1.Name = "label1";
-            label1.Size = new Size(133, 25);
+            label1.Size = new Size(218, 38);
             label1.TabIndex = 0;
             label1.Text = "Medical Record";
+            label1.Click += label1_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(40, 329);
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(28, 326);
             label7.Name = "label7";
-            label7.Size = new Size(105, 25);
+            label7.Size = new Size(114, 25);
             label7.TabIndex = 44;
             label7.Text = "Prescription";
             // 
@@ -217,9 +226,10 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(52, 358);
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(35, 360);
             label8.Name = "label8";
-            label8.Size = new Size(90, 25);
+            label8.Size = new Size(100, 25);
             label8.TabIndex = 46;
             label8.Text = "Treatment";
             // 
@@ -235,6 +245,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(803, 504);
             Controls.Add(comboBoxTreatment);
             Controls.Add(label8);
@@ -243,7 +254,6 @@
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
-            Controls.Add(btnInsert);
             Controls.Add(btnInsert);
             Controls.Add(comboBoxDiagnosis);
             Controls.Add(comboBoxNurse);

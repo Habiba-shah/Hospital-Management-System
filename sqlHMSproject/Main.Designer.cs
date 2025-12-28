@@ -56,16 +56,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(196, 25);
             label1.Name = "label1";
-            label1.Size = new Size(381, 32);
+            label1.Size = new Size(476, 38);
             label1.TabIndex = 0;
             label1.Text = "HOSPITAL MANAGEMENT SYSTEM";
+            label1.Click += label1_Click;
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.MenuHighlight;
+            panel2.BackColor = SystemColors.ActiveCaption;
             panel2.Controls.Add(button7);
             panel2.Controls.Add(button6);
             panel2.Controls.Add(button5);
@@ -82,6 +83,7 @@
             // 
             // button7
             // 
+            button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.Location = new Point(24, 276);
             button7.Name = "button7";
             button7.Size = new Size(164, 34);
@@ -92,6 +94,7 @@
             // 
             // button6
             // 
+            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button6.Location = new Point(42, 67);
             button6.Name = "button6";
             button6.Size = new Size(112, 34);
@@ -102,6 +105,7 @@
             // 
             // button5
             // 
+            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.Location = new Point(42, 316);
             button5.Name = "button5";
             button5.Size = new Size(112, 34);
@@ -112,6 +116,7 @@
             // 
             // button4
             // 
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.Location = new Point(24, 236);
             button4.Name = "button4";
             button4.Size = new Size(145, 34);
@@ -122,6 +127,7 @@
             // 
             // button3
             // 
+            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.Location = new Point(24, 187);
             button3.Name = "button3";
             button3.Size = new Size(130, 34);
@@ -132,6 +138,7 @@
             // 
             // button2
             // 
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.Location = new Point(24, 147);
             button2.Name = "button2";
             button2.Size = new Size(130, 34);
@@ -142,6 +149,7 @@
             // 
             // button1
             // 
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(24, 107);
             button1.Name = "button1";
             button1.Size = new Size(130, 34);
@@ -153,10 +161,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ButtonShadow;
+            label2.BackColor = SystemColors.ButtonHighlight;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(24, 21);
             label2.Name = "label2";
-            label2.Size = new Size(150, 25);
+            label2.Size = new Size(162, 25);
             label2.TabIndex = 0;
             label2.Text = "Life Care Hospital";
             // 

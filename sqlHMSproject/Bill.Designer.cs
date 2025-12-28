@@ -43,6 +43,7 @@
             label2 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -50,6 +51,7 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(380, 83);
             dataGridView1.Name = "dataGridView1";
@@ -59,6 +61,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(322, 387);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
@@ -69,6 +72,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.Location = new Point(173, 387);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
@@ -79,6 +83,7 @@
             // 
             // btnInsert
             // 
+            btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.Location = new Point(26, 387);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(112, 34);
@@ -89,6 +94,7 @@
             // 
             // textBox4
             // 
+            textBox4.BackColor = SystemColors.ControlLightLight;
             textBox4.Location = new Point(136, 276);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(201, 31);
@@ -96,6 +102,7 @@
             // 
             // textBox3
             // 
+            textBox3.BackColor = SystemColors.ControlLightLight;
             textBox3.Location = new Point(136, 229);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(201, 31);
@@ -103,6 +110,7 @@
             // 
             // textBox2
             // 
+            textBox2.BackColor = SystemColors.ControlLightLight;
             textBox2.Location = new Point(136, 167);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(201, 31);
@@ -110,6 +118,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = SystemColors.ControlLightLight;
             textBox1.Location = new Point(136, 111);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(201, 31);
@@ -126,36 +135,41 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(13, 276);
             label5.Name = "label5";
-            label5.Size = new Size(68, 25);
+            label5.Size = new Size(73, 25);
             label5.TabIndex = 19;
             label5.Text = "Statuss";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(13, 229);
             label4.Name = "label4";
-            label4.Size = new Size(77, 25);
+            label4.Size = new Size(81, 25);
             label4.TabIndex = 18;
             label4.Text = "Amount";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(13, 167);
             label3.Name = "label3";
-            label3.Size = new Size(112, 25);
+            label3.Size = new Size(123, 25);
             label3.TabIndex = 17;
             label3.Text = "PatientName";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(13, 114);
             label2.Name = "label2";
-            label2.Size = new Size(40, 25);
+            label2.Size = new Size(43, 25);
             label2.TabIndex = 16;
             label2.Text = "BID";
             // 
@@ -163,6 +177,7 @@
             // 
             flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(833, 64);
@@ -170,10 +185,9 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(34, 25);
+            label1.Size = new Size(790, 50);
             label1.TabIndex = 0;
             label1.Text = "Bill";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -182,6 +196,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(833, 451);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
@@ -203,7 +218,6 @@
             Load += Bill_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -225,5 +239,6 @@
         private Label label2;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -54,6 +54,7 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(375, 103);
             dataGridView1.Name = "dataGridView1";
@@ -63,6 +64,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(340, 398);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
@@ -73,6 +75,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.Location = new Point(191, 398);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
@@ -83,6 +86,7 @@
             // 
             // btnInsert
             // 
+            btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.Location = new Point(44, 398);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(112, 34);
@@ -115,9 +119,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(31, 295);
             label6.Name = "label6";
-            label6.Size = new Size(60, 25);
+            label6.Size = new Size(65, 25);
             label6.TabIndex = 47;
             label6.Text = "Status";
             label6.Click += label6_Click;
@@ -125,29 +130,33 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(12, 242);
             label5.Name = "label5";
-            label5.Size = new Size(117, 25);
+            label5.Size = new Size(125, 25);
             label5.TabIndex = 46;
             label5.Text = "Date_Created";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(19, 141);
             label3.Name = "label3";
-            label3.Size = new Size(112, 25);
+            label3.Size = new Size(123, 25);
             label3.TabIndex = 45;
             label3.Text = "PatientName";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(31, 91);
             label2.Name = "label2";
-            label2.Size = new Size(42, 25);
+            label2.Size = new Size(44, 25);
             label2.TabIndex = 44;
             label2.Text = "AID";
+            label2.Click += label2_Click;
             // 
             // panel1
             // 
@@ -161,9 +170,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(354, 26);
             label1.Name = "label1";
-            label1.Size = new Size(118, 25);
+            label1.Size = new Size(125, 25);
             label1.TabIndex = 0;
             label1.Text = "Appointment";
             // 
@@ -175,8 +185,20 @@
             comboBoxDoctor.Size = new Size(201, 33);
             comboBoxDoctor.TabIndex = 57;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(22, 191);
+            label4.Name = "label4";
+            label4.Size = new Size(120, 25);
+            label4.TabIndex = 56;
+            label4.Text = "DoctorName";
+            label4.Click += label4_Click;
+            // 
             // panelAvailability
             // 
+            panelAvailability.BackColor = SystemColors.ButtonHighlight;
             panelAvailability.BorderStyle = BorderStyle.FixedSingle;
             panelAvailability.Controls.Add(lblAvailability);
             panelAvailability.Location = new Point(44, 330);
@@ -193,16 +215,6 @@
             lblAvailability.Size = new Size(0, 25);
             lblAvailability.TabIndex = 0;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(22, 191);
-            label4.Name = "label4";
-            label4.Size = new Size(114, 25);
-            label4.TabIndex = 56;
-            label4.Text = "DoctorName";
-            label4.Click += label4_Click;
-            // 
             // dateTimePicker1
             // 
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
@@ -216,8 +228,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
-            Controls.Add(dateTimePicker1);
             Controls.Add(dateTimePicker1);
             Controls.Add(comboBoxDoctor);
             Controls.Add(panelAvailability);

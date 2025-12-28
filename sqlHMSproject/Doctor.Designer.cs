@@ -61,9 +61,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(354, 26);
             label1.Name = "label1";
-            label1.Size = new Size(67, 25);
+            label1.Size = new Size(93, 32);
             label1.TabIndex = 0;
             label1.Text = "Doctor";
             label1.Click += label1_Click;
@@ -71,6 +72,7 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(408, 99);
             dataGridView1.Name = "dataGridView1";
@@ -80,6 +82,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.Location = new Point(356, 372);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(112, 34);
@@ -90,6 +93,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.Location = new Point(207, 372);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(112, 34);
@@ -100,6 +104,7 @@
             // 
             // btnInsert
             // 
+            btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.Location = new Point(60, 372);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(112, 34);
@@ -140,45 +145,50 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(35, 318);
             label6.Name = "label6";
-            label6.Size = new Size(107, 25);
+            label6.Size = new Size(115, 25);
             label6.TabIndex = 19;
             label6.Text = "Department";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(38, 261);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(60, 261);
             label5.Name = "label5";
-            label5.Size = new Size(62, 25);
+            label5.Size = new Size(66, 25);
             label5.TabIndex = 18;
             label5.Text = "Phone";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(47, 214);
             label4.Name = "label4";
-            label4.Size = new Size(86, 25);
+            label4.Size = new Size(94, 25);
             label4.TabIndex = 17;
             label4.Text = "Speciality";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(47, 152);
             label3.Name = "label3";
-            label3.Size = new Size(114, 25);
+            label3.Size = new Size(120, 25);
             label3.TabIndex = 16;
             label3.Text = "DoctorName";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(47, 99);
             label2.Name = "label2";
-            label2.Size = new Size(85, 25);
+            label2.Size = new Size(89, 25);
             label2.TabIndex = 15;
             label2.Text = "DoctorID";
             // 
@@ -194,6 +204,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(832, 471);
             Controls.Add(comboBoxDoctorName);
             Controls.Add(dataGridView1);
