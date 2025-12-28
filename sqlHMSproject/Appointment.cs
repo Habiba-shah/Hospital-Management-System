@@ -17,6 +17,8 @@ namespace sqlHMSproject
         public Appointment()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
+            dateTimePicker1.Enabled = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -32,6 +34,10 @@ namespace sqlHMSproject
         private void Appointment_Load(object sender, EventArgs e)
         {
             AppointData();
+            LoadDoctors();
+            GetNextAppointmentId();
+
+            comboBoxDoctor.SelectedIndexChanged += ComboBoxDoctor_SelectedIndexChanged;
         }
         private void AppointData()
         {
@@ -58,7 +64,7 @@ namespace sqlHMSproject
             {
                 int aid = int.Parse(textBox1.Text);
                 string patientname = textBox2.Text;
-                string doctorname = textBox3.Text;
+                string doctorname = comboBoxDoctor.Text;
                 string date_created = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 string status = textBox4.Text;
 
@@ -82,6 +88,7 @@ namespace sqlHMSproject
 
                 MessageBox.Show("Record inserted successfully");
                 AppointData();
+                GetNextAppointmentId();
             }
             catch (Exception ex)
             {
@@ -95,7 +102,7 @@ namespace sqlHMSproject
             {
                 int aid = int.Parse(textBox1.Text);
                 string patientname = textBox2.Text;
-                string doctorname = textBox3.Text;
+                string doctorname = comboBoxDoctor.Text;
                 string date_created = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 string status = textBox4.Text;
 
@@ -147,6 +154,58 @@ namespace sqlHMSproject
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void LoadDoctors()
+        {
+            // Hardcoding doctor names to match Doctor form
+            comboBoxDoctor.Items.Add("Dr. John Smith");
+            comboBoxDoctor.Items.Add("Dr. Sarah Wilson");
+            comboBoxDoctor.Items.Add("Dr. James Brown");
+            comboBoxDoctor.Items.Add("Dr. Emily Davis");
+            comboBoxDoctor.Items.Add("Dr. Michael White");
+        }
+
+        private void GetNextAppointmentId()
+        {
+            string query = "SELECT ISNULL(MAX(aid), 0) + 1 FROM appointments";
+            using (SqlConnection conn = new DatabaseConnection().GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    textBox1.Text = result.ToString();
+                }
+            }
+        }
+
+        private void ComboBoxDoctor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxDoctor.SelectedItem == null) return;
+
+            string selectedDoctor = comboBoxDoctor.SelectedItem.ToString();
+            panelAvailability.Visible = true;
+            dateTimePicker1.Enabled = true;
+
+            // Mock availability logic. In a real app, strict dates would be fetched from DB.
+            switch (selectedDoctor)
+            {
+                case "Dr. John Smith":
+                    lblAvailability.Text = "Available: Mon, Wed, Fri (9AM - 2PM)";
+                    break;
+                case "Dr. Sarah Wilson":
+                    lblAvailability.Text = "Available: Tue, Thu (10AM - 4PM)";
+                    break;
+                case "Dr. James Brown":
+                    lblAvailability.Text = "Available: Mon-Fri (8AM - 12PM)";
+                    break;
+                case "Dr. Emily Davis":
+                    lblAvailability.Text = "Available: Weekends (11AM - 5PM)";
+                    break;
+                default:
+                    lblAvailability.Text = "Available: Please call to confirm.";
+                    break;
             }
         }
     }

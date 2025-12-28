@@ -32,9 +32,11 @@
             btnDelete = new Button();
             btnUpdate = new Button();
             btnInsert = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
+            btnInsert = new Button();
+            btnInsert = new Button();
+            comboBoxDiagnosis = new ComboBox();
+            comboBoxNurse = new ComboBox();
+            comboBoxDoctor = new ComboBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label6 = new Label();
@@ -45,9 +47,11 @@
             panel1 = new Panel();
             label1 = new Label();
             label7 = new Label();
-            textBox6 = new TextBox();
+            label1 = new Label();
+            label7 = new Label();
+            comboBoxPrescription = new ComboBox();
             label8 = new Label();
-            textBox7 = new TextBox();
+            comboBoxTreatment = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -92,26 +96,29 @@
             btnInsert.UseVisualStyleBackColor = true;
             btnInsert.Click += btnInsert_Click;
             // 
-            // textBox5
+            // comboBoxDiagnosis
             // 
-            textBox5.Location = new Point(160, 280);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(201, 31);
-            textBox5.TabIndex = 39;
+            comboBoxDiagnosis.FormattingEnabled = true;
+            comboBoxDiagnosis.Location = new Point(160, 280);
+            comboBoxDiagnosis.Name = "comboBoxDiagnosis";
+            comboBoxDiagnosis.Size = new Size(201, 33);
+            comboBoxDiagnosis.TabIndex = 39;
             // 
-            // textBox4
+            // comboBoxNurse
             // 
-            textBox4.Location = new Point(163, 243);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(201, 31);
-            textBox4.TabIndex = 38;
+            comboBoxNurse.FormattingEnabled = true;
+            comboBoxNurse.Location = new Point(163, 243);
+            comboBoxNurse.Name = "comboBoxNurse";
+            comboBoxNurse.Size = new Size(201, 33);
+            comboBoxNurse.TabIndex = 38;
             // 
-            // textBox3
+            // comboBoxDoctor
             // 
-            textBox3.Location = new Point(160, 196);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(201, 31);
-            textBox3.TabIndex = 37;
+            comboBoxDoctor.FormattingEnabled = true;
+            comboBoxDoctor.Location = new Point(160, 196);
+            comboBoxDoctor.Name = "comboBoxDoctor";
+            comboBoxDoctor.Size = new Size(201, 33);
+            comboBoxDoctor.TabIndex = 37;
             // 
             // textBox2
             // 
@@ -199,12 +206,13 @@
             label7.TabIndex = 44;
             label7.Text = "Prescription";
             // 
-            // textBox6
+            // comboBoxPrescription
             // 
-            textBox6.Location = new Point(163, 323);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(177, 31);
-            textBox6.TabIndex = 45;
+            comboBoxPrescription.FormattingEnabled = true;
+            comboBoxPrescription.Location = new Point(163, 323);
+            comboBoxPrescription.Name = "comboBoxPrescription";
+            comboBoxPrescription.Size = new Size(177, 33);
+            comboBoxPrescription.TabIndex = 45;
             // 
             // label8
             // 
@@ -215,29 +223,31 @@
             label8.TabIndex = 46;
             label8.Text = "Treatment";
             // 
-            // textBox7
+            // comboBoxTreatment
             // 
-            textBox7.Location = new Point(165, 360);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(150, 31);
-            textBox7.TabIndex = 47;
+            comboBoxTreatment.FormattingEnabled = true;
+            comboBoxTreatment.Location = new Point(165, 360);
+            comboBoxTreatment.Name = "comboBoxTreatment";
+            comboBoxTreatment.Size = new Size(150, 33);
+            comboBoxTreatment.TabIndex = 47;
             // 
             // MedicalRecord
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(803, 504);
-            Controls.Add(textBox7);
+            Controls.Add(comboBoxTreatment);
             Controls.Add(label8);
-            Controls.Add(textBox6);
+            Controls.Add(comboBoxPrescription);
             Controls.Add(label7);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnInsert);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(btnInsert);
+            Controls.Add(comboBoxDiagnosis);
+            Controls.Add(comboBoxNurse);
+            Controls.Add(comboBoxDoctor);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label6);
@@ -263,9 +273,9 @@
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnInsert;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private ComboBox comboBoxDiagnosis;
+        private ComboBox comboBoxNurse;
+        private ComboBox comboBoxDoctor;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label6;
@@ -276,8 +286,8 @@
         private Panel panel1;
         private Label label1;
         private Label label7;
-        private TextBox textBox6;
+        private ComboBox comboBoxPrescription;
         private Label label8;
-        private TextBox textBox7;
+        private ComboBox comboBoxTreatment;
     }
 }

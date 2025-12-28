@@ -34,16 +34,16 @@
             btnDelete = new Button();
             btnUpdate = new Button();
             btnInsert = new Button();
-            textBox5 = new TextBox();
+            comboBoxDepartment = new ComboBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
             textBox1 = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            comboBoxDoctorName = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -108,12 +108,13 @@
             btnInsert.UseVisualStyleBackColor = true;
             btnInsert.Click += btnInsert_Click;
             // 
-            // textBox5
+            // comboBoxDepartment
             // 
-            textBox5.Location = new Point(170, 312);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(201, 31);
-            textBox5.TabIndex = 24;
+            comboBoxDepartment.FormattingEnabled = true;
+            comboBoxDepartment.Location = new Point(170, 312);
+            comboBoxDepartment.Name = "comboBoxDepartment";
+            comboBoxDepartment.Size = new Size(201, 33);
+            comboBoxDepartment.TabIndex = 24;
             // 
             // textBox4
             // 
@@ -128,13 +129,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(201, 31);
             textBox3.TabIndex = 22;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(170, 152);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(201, 31);
-            textBox2.TabIndex = 21;
             // 
             // textBox1
             // 
@@ -188,19 +182,27 @@
             label2.TabIndex = 15;
             label2.Text = "DoctorID";
             // 
+            // comboBoxDoctorName
+            // 
+            comboBoxDoctorName.FormattingEnabled = true;
+            comboBoxDoctorName.Location = new Point(170, 152);
+            comboBoxDoctorName.Name = "comboBoxDoctorName";
+            comboBoxDoctorName.Size = new Size(182, 33);
+            comboBoxDoctorName.TabIndex = 29;
+            // 
             // Doctor
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(832, 471);
+            Controls.Add(comboBoxDoctorName);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnInsert);
-            Controls.Add(textBox5);
+            Controls.Add(comboBoxDepartment);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
-            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -227,15 +229,15 @@
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnInsert;
-        private TextBox textBox5;
+        private ComboBox comboBoxDepartment;
         private TextBox textBox4;
         private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
+        private ComboBox comboBoxDoctorName;
     }
 }

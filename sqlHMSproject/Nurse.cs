@@ -17,6 +17,7 @@ namespace sqlHMSproject
         public Nurse()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +56,7 @@ namespace sqlHMSproject
 
                 MessageBox.Show("Record inserted successfully");
                 NurseData();
+                GetNextNurseId();
             }
             catch (Exception ex)
             {
@@ -146,6 +148,21 @@ namespace sqlHMSproject
         private void Nurse_Load(object sender, EventArgs e)
         {
             NurseData();
+            GetNextNurseId();
+        }
+
+        private void GetNextNurseId()
+        {
+            string query = "SELECT ISNULL(MAX(nurseid), 0) + 1 FROM nurses";
+            using (SqlConnection conn = new DatabaseConnection().GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    textBox1.Text = result.ToString();
+                }
+            }
         }
     }
 }

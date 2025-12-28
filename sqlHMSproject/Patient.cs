@@ -16,6 +16,7 @@ namespace sqlHMSproject
         public Patient()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -36,6 +37,7 @@ namespace sqlHMSproject
         private void Patient_Load(object sender, EventArgs e)
         {
             patientData();
+            GetNextPatientId();
         }
 
         private void patientData()
@@ -80,6 +82,7 @@ namespace sqlHMSproject
 
             MessageBox.Show("Record inserted successfully");
             patientData();
+            GetNextPatientId();
         }
 
 
@@ -134,6 +137,20 @@ namespace sqlHMSproject
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GetNextPatientId()
+        {
+            string query = "SELECT ISNULL(MAX(patientid), 0) + 1 FROM patients";
+            using (SqlConnection conn = new DatabaseConnection().GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    textBox1.Text = result.ToString();
+                }
+            }
         }
     }
 }

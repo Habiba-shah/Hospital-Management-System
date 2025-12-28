@@ -41,11 +41,14 @@
             label2 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            textBox3 = new TextBox();
+            comboBoxDoctor = new ComboBox();
             label4 = new Label();
+            panelAvailability = new Panel();
+            lblAvailability = new Label();
             dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            panelAvailability.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -164,12 +167,31 @@
             label1.TabIndex = 0;
             label1.Text = "Appointment";
             // 
-            // textBox3
+            // comboBoxDoctor
             // 
-            textBox3.Location = new Point(154, 191);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(201, 31);
-            textBox3.TabIndex = 57;
+            comboBoxDoctor.FormattingEnabled = true;
+            comboBoxDoctor.Location = new Point(154, 191);
+            comboBoxDoctor.Name = "comboBoxDoctor";
+            comboBoxDoctor.Size = new Size(201, 33);
+            comboBoxDoctor.TabIndex = 57;
+            // 
+            // panelAvailability
+            // 
+            panelAvailability.BorderStyle = BorderStyle.FixedSingle;
+            panelAvailability.Controls.Add(lblAvailability);
+            panelAvailability.Location = new Point(44, 330);
+            panelAvailability.Name = "panelAvailability";
+            panelAvailability.Size = new Size(300, 60);
+            panelAvailability.TabIndex = 60;
+            panelAvailability.Visible = false;
+            // 
+            // lblAvailability
+            // 
+            lblAvailability.AutoSize = true;
+            lblAvailability.Location = new Point(5, 5);
+            lblAvailability.Name = "lblAvailability";
+            lblAvailability.Size = new Size(0, 25);
+            lblAvailability.TabIndex = 0;
             // 
             // label4
             // 
@@ -196,7 +218,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dateTimePicker1);
-            Controls.Add(textBox3);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(comboBoxDoctor);
+            Controls.Add(panelAvailability);
             Controls.Add(label4);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
@@ -217,6 +241,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panelAvailability.ResumeLayout(false);
+            panelAvailability.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -236,7 +262,9 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
-        private TextBox textBox3;
+        private ComboBox comboBoxDoctor;
+        private Panel panelAvailability;
+        private Label lblAvailability;
         private Label label4;
         private DateTimePicker dateTimePicker1;
     }

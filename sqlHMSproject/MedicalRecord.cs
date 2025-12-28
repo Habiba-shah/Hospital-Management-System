@@ -17,6 +17,7 @@ namespace sqlHMSproject
         public MedicalRecord()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -25,11 +26,11 @@ namespace sqlHMSproject
             {
                 int mid = int.Parse(textBox1.Text);
                 string patientname = textBox2.Text;
-                string doctorname = textBox3.Text;
-                string nurse = textBox4.Text;
-                string diagnosis = textBox5.Text;
-                string prescription = textBox6.Text;
-                string treatment = textBox7.Text;
+                string doctorname = comboBoxDoctor.Text;
+                string nurse = comboBoxNurse.Text;
+                string diagnosis = comboBoxDiagnosis.Text;
+                string prescription = comboBoxPrescription.Text;
+                string treatment = comboBoxTreatment.Text;
 
 
 
@@ -71,11 +72,11 @@ namespace sqlHMSproject
             {
                 int mid = int.Parse(textBox1.Text);
                 string patientname = textBox2.Text;
-                string doctorname = textBox3.Text;
-                string nurse = textBox4.Text;
-                string diagnosis = textBox5.Text;
-                string prescription = textBox6.Text;
-                string treatment = textBox7.Text;
+                string doctorname = comboBoxDoctor.Text;
+                string nurse = comboBoxNurse.Text;
+                string diagnosis = comboBoxDiagnosis.Text;
+                string prescription = comboBoxPrescription.Text;
+                string treatment = comboBoxTreatment.Text;
 
 
 
@@ -138,6 +139,100 @@ namespace sqlHMSproject
         private void MedicalRecord_Load(object sender, EventArgs e)
         {
             RecordData();
+            GetNextMedicalRecordId();
+
+            // Hardcode dropdown values
+            // Diagnosis
+            comboBoxDiagnosis.Items.Add("Flu");
+            comboBoxDiagnosis.Items.Add("Infection");
+            comboBoxDiagnosis.Items.Add("Hypertension");
+            comboBoxDiagnosis.Items.Add("Diabetes");
+            comboBoxDiagnosis.Items.Add("Covid-19");
+
+            // Prescription
+            comboBoxPrescription.Items.Add("Paracetamol");
+            comboBoxPrescription.Items.Add("Antibiotics");
+            comboBoxPrescription.Items.Add("Insulin");
+            comboBoxPrescription.Items.Add("Cough Syrup");
+            comboBoxPrescription.Items.Add("Vitamins");
+
+            // Treatment
+            comboBoxTreatment.Items.Add("Rest");
+            comboBoxTreatment.Items.Add("Surgery");
+            comboBoxTreatment.Items.Add("Physical Therapy");
+            comboBoxTreatment.Items.Add("Dietary Changes");
+
+            // Doctor
+            comboBoxDoctor.Items.Add("Dr. John Smith");
+            comboBoxDoctor.Items.Add("Dr. Sarah Wilson");
+            comboBoxDoctor.Items.Add("Dr. James Brown");
+            comboBoxDoctor.Items.Add("Dr. Emily Davis");
+            comboBoxDoctor.Items.Add("Dr. Michael White");
+
+            // Nurse
+            comboBoxNurse.Items.Add("Nurse Joy");
+            comboBoxNurse.Items.Add("Nurse Blue");
+            comboBoxNurse.Items.Add("Nurse Red");
+            comboBoxNurse.Items.Add("Nurse White"); // Added space for linting
+
+            // Auto-fill event
+            textBox2.Leave += TextBox2_Leave;
+        }
+
+        private void TextBox2_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox2.Text)) return;
+
+            string patientName = textBox2.Text;
+
+            // Fetch Doctor from Appointments
+            string query = "SELECT TOP 1 doctorname FROM appointments WHERE patientname = @patientname ORDER BY aid DESC";
+
+            using (SqlConnection conn = new DatabaseConnection().GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@patientname", patientName);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        string doctor = result.ToString();
+                        if (comboBoxDoctor.Items.Contains(doctor))
+                        {
+                            comboBoxDoctor.SelectedItem = doctor;
+                        }
+                        else
+                        {
+                            // If doctor isn't in the list, just set text or add it
+                            comboBoxDoctor.Text = doctor;
+                        }
+
+                        // Fake logic for Nurse
+                        comboBoxNurse.SelectedItem = "Nurse Joy";
+                    }
+                    else
+                    {
+                        // Optional: Clear if no record found
+                        comboBoxDoctor.SelectedIndex = -1;
+                        comboBoxNurse.SelectedIndex = -1;
+                    }
+                }
+            }
+        }
+
+        private void GetNextMedicalRecordId()
+        {
+            string query = "SELECT ISNULL(MAX(mid), 0) + 1 FROM record";
+            using (SqlConnection conn = new DatabaseConnection().GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    textBox1.Text = result.ToString();
+                }
+            }
         }
         private void RecordData()
         {

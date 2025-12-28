@@ -74,7 +74,7 @@ namespace sqlHMSproject
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblCount1.Text = "total patients:" + count.ToString();
+                        lblCount1.Text = count.ToString();
 
                     }
                 }
@@ -103,7 +103,7 @@ namespace sqlHMSproject
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblCount2.Text = "total Doctors:" + count.ToString();
+                        lblCount2.Text = count.ToString();
 
                     }
                 }
@@ -130,7 +130,7 @@ namespace sqlHMSproject
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblCount3.Text = "total Nurses:" + count.ToString();
+                        lblCount3.Text = count.ToString();
 
                     }
                 }
@@ -158,7 +158,7 @@ namespace sqlHMSproject
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        lblCount4.Text = "total Appointments:" + count.ToString();
+                        lblCount4.Text = count.ToString();
 
                     }
                 }
